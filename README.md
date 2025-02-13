@@ -2,6 +2,8 @@
 
 A modern icon picker application built with Next.js, featuring color customization and powerful search capabilities.
 
+![Color Icon Picker Preview](./public/preview.jpeg)
+
 ## Features
 
 - 🎨 Color customization for icons
