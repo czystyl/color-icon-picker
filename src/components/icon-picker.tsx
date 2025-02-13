@@ -142,7 +142,11 @@ export function IconPicker({ onSelect, selectedIcon }: IconPickerProps) {
   return (
     <Popover open={isOpen} onOpenChange={setIsOpen} modal={false}>
       <PopoverTrigger asChild>
-        <Button variant="ghost" size="icon" className="[&_svg]:size-10 size-16">
+        <Button
+          variant="outline"
+          size="icon"
+          className="[&_svg]:size-10 size-20 bg-transparent border-dashed border-2 border-foreground/20"
+        >
           <DynamicIcon
             name={selectedIcon?.name ?? 'image'}
             color={selectedIcon?.color}

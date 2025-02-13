@@ -12,8 +12,8 @@ export default function Example() {
   }, []);
 
   return (
-    <div className="flex flex-col gap-4 items-center">
-      <div className="rounded-lg border bg-card size-24 flex justify-center items-center my-8">
+    <div className="flex flex-col gap-4 items-center h-60">
+      <div className=" size-24 flex justify-center items-center my-8">
         {selectedIcon && (
           <IconPicker onSelect={setSelectedIcon} selectedIcon={selectedIcon} />
         )}
