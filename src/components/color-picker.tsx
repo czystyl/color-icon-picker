@@ -70,7 +70,7 @@ export function ColorPicker({
         >
           <DynamicIcon
             name="palette"
-            className="h-4 w-4 text-primary mix-blend-difference"
+            className="h-4 w-4 text-zinc-400 dark:text-zinc-500 mix-blend-difference"
           />
         </Button>
         <Input

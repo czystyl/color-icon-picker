@@ -1,15 +1,15 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { IconPicker, type IconPickerData } from '@/components/icon-picker';
+import { getRandomIcon } from '@/lib/get-random-item';
 
-type ExampleProps = {
-  defaultIconColor: IconPickerData;
-};
+export default function Example() {
+  const [selectedIcon, setSelectedIcon] = useState<IconPickerData>();
 
-export default function Example({ defaultIconColor }: ExampleProps) {
-  const [selectedIcon, setSelectedIcon] =
-    useState<IconPickerData>(defaultIconColor);
+  useEffect(() => {
+    setSelectedIcon(getRandomIcon());
+  }, []);
 
   return (
     <div className="flex flex-col gap-4 items-center">
