@@ -2,9 +2,7 @@ import Example from './example';
 import { ModeToggle } from '@/components/mode-toggle';
 import { getRandomIcon } from '@/lib/get-random-item';
 
-export default function Home() {
-  const defaultIconColor = getRandomIcon();
-
+export default async function Home() {
   return (
     <div className="relative min-h-screen flex flex-col items-center justify-between p-8 pb-20 gap-8 sm:p-20 font-[family-name:var(--font-geist-sans)] bg-background text-foreground transition-all duration-700 overflow-x-hidden">
       {/* Sophisticated static background */}
@@ -32,7 +30,7 @@ export default function Home() {
           <div className="absolute -inset-3 bg-gradient-to-r from-blue-500/[0.04] via-emerald-500/[0.04] to-green-500/[0.04] opacity-0 group-hover:opacity-100 blur-2xl transition-all duration-700 -z-10" />
           <div className="absolute -inset-1 bg-gradient-to-r from-blue-300/[0.03] via-emerald-300/[0.03] to-green-300/[0.03] opacity-0 group-hover:opacity-100 blur-xl transition-all duration-500 -z-10" />
           <div className="relative z-20">
-            <Example defaultIconColor={defaultIconColor} />
+            <Example defaultIconColor={getRandomIcon()} />
           </div>
         </div>
       </div>
