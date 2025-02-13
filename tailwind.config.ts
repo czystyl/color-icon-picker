@@ -57,30 +57,39 @@ export default {
         sm: 'calc(var(--radius) - 4px)',
       },
       keyframes: {
-        gradient: {
-          '0%': { backgroundPosition: '0% 50%' },
-          '50%': { backgroundPosition: '100% 50%' },
-          '100%': { backgroundPosition: '0% 50%' },
-        },
         glow: {
-          '0%': { opacity: '0.4' },
-          '50%': { opacity: '0.6' },
-          '100%': { opacity: '0.4' },
+          '0%, 100%': { opacity: '0.3' },
+          '50%': { opacity: '0.5' },
         },
         'fade-in': {
           '0%': { opacity: '0' },
+          '25%': { opacity: '0.3' },
+          '75%': { opacity: '0.8' },
           '100%': { opacity: '1' },
         },
         'fade-in-up': {
-          '0%': { opacity: '0', transform: 'translateY(10px)' },
-          '100%': { opacity: '1', transform: 'translateY(0)' },
+          '0%': {
+            opacity: '0',
+            transform: 'translateY(20px)',
+          },
+          '25%': {
+            opacity: '0.3',
+            transform: 'translateY(15px)',
+          },
+          '75%': {
+            opacity: '0.8',
+            transform: 'translateY(5px)',
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translateY(0)',
+          },
         },
       },
       animation: {
-        gradient: 'gradient 6s ease infinite',
-        glow: 'glow 6s ease-in-out infinite',
-        'fade-in': 'fade-in 0.5s ease-out',
-        'fade-in-up': 'fade-in-up 0.5s ease-out',
+        glow: 'glow 4s ease-in-out infinite',
+        'fade-in': 'fade-in 0.8s ease-out',
+        'fade-in-up': 'fade-in-up 0.8s cubic-bezier(0.4, 0, 0.2, 1)',
       },
       backgroundSize: {
         'gradient-size': '200% 200%',

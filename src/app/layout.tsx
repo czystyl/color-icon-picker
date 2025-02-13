@@ -16,20 +16,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: 'Color Icon Picker',
   description: 'A modern color icon picker with Lucide Icons',
-  icons: {
-    icon: [
-      {
-        media: '(prefers-color-scheme: light)',
-        url: '/icon.svg',
-        href: '/icon.svg',
-      },
-      {
-        media: '(prefers-color-scheme: dark)',
-        url: '/dark-icon.svg',
-        href: '/dark-icon.svg',
-      },
-    ],
-  },
+  manifest: '/site.webmanifest',
 };
 
 export default function RootLayout({
@@ -41,17 +28,23 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <link
-          rel="icon"
-          href="/icon.svg"
-          type="image/svg+xml"
-          media="(prefers-color-scheme: light)"
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
         />
         <link
           rel="icon"
-          href="/dark-icon.svg"
-          type="image/svg+xml"
-          media="(prefers-color-scheme: dark)"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
         />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}

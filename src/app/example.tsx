@@ -3,10 +3,13 @@
 import { useState } from 'react';
 import { IconPicker, type IconPickerData } from '@/components/icon-picker';
 
-export default function Example() {
-  const [selectedIcon, setSelectedIcon] = useState<
-    IconPickerData | undefined
-  >();
+type ExampleProps = {
+  defaultIconColor: IconPickerData;
+};
+
+export default function Example({ defaultIconColor }: ExampleProps) {
+  const [selectedIcon, setSelectedIcon] =
+    useState<IconPickerData>(defaultIconColor);
 
   return (
     <div className="flex flex-col gap-4 items-center">
